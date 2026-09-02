@@ -1,0 +1,2 @@
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+window.addEventListener('scroll',()=>{const y=scrollY;const m=document.querySelector('.hero-media');if(m&&y<innerHeight)m.style.transform=`scale(${1.06-y/innerHeight*.06}) translateY(${y*.12}px)`});
